@@ -14,7 +14,7 @@ function AnimalForm({ addAnimal, tutors }) {
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.nome]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
@@ -55,7 +55,7 @@ function AnimalForm({ addAnimal, tutors }) {
         <select
           nome="tutorId"
           id="tutorId"
-          value={formData.tutorId}
+          value={formData.tutor_id}
           onChange={handleChange}
         >
           <option value="">Selecione um tutor</option>
