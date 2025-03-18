@@ -1,6 +1,6 @@
 import React from "react";
 
-function AnimalCard({ animal }) {
+function AnimalCard({ animal, onEdit, onDelete }) {
   return (
     <div className="tutor-card">
       <h3>{animal.nome}</h3>
@@ -28,6 +28,8 @@ function AnimalCard({ animal }) {
       <p>
         <strong>Cadastro:</strong> {animal.cadastro}
       </p>
+      <button onClick={() => onEdit(animal)}>Editar</button>
+      <button onClick={() => onDelete(animal.id)}>Excluir</button>
     </div>
   );
 }
