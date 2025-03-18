@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function TutorEditForm({ tutor, onConfirm, onCancel }) {
   const [formData, setFormData] = useState({
     nome: "",
-    cpf: "",
+    documento: "",
     email: "",
     rua: "",
     numero: "",
@@ -17,15 +17,15 @@ function TutorEditForm({ tutor, onConfirm, onCancel }) {
   useEffect(() => {
     setFormData({
       nome: tutor.nome || "",
-      cpf: tutor.cpf || "",
+      documento: tutor.documento || "",
       email: tutor.email || "",
-      rua: tutor.rua || "",
-      numero: tutor.numero || "",
-      complemento: tutor.complemento || "",
-      bairro: tutor.bairro || "",
-      cidade: tutor.cidade || "",
-      estado: tutor.estado || "",
-      cep: tutor.cep || "",
+      rua: tutor.endereco.rua || "",
+      numero: tutor.endereco.numero || "",
+      complemento: tutor.endereco.complemento || "",
+      bairro: tutor.endereco.bairro || "",
+      cidade: tutor.endereco.cidade || "",
+      estado: tutor.endereco.estado || "",
+      cep: tutor.endereco.cep || "",
     });
   }, [tutor]);
 
