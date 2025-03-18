@@ -8,13 +8,10 @@ function TutorCard({ tutor }) {
       <p>
         <strong>Email:</strong> {tutor.email}
       </p>
-      {/* <p>
-        <strong>Endereço:</strong> {tutor.address.street},{" "}
-        {tutor.address.number}
-        {tutor.address.complement && `, ${tutor.address.complement}`},{" "}
-        {tutor.address.neighborhood}, {tutor.address.city} -{" "}
-        {tutor.address.state}, CEP: {tutor.address.cep}
-      </p> */}
+      <strong>Endereço:</strong> {tutor.endereco.rua}, {tutor.endereco.number}
+      {tutor.endereco.complemento && `, ${tutor.endereco.complemento}`},{" "}
+      {tutor.endereco.bairro}, {tutor.endereco.cidade} - {tutor.endereco.estado}
+      , CEP: {tutor.endereco.cep}
     </div>
   );
 }

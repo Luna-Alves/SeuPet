@@ -78,7 +78,7 @@ function TutorForm({ addTutor }) {
           onChange={handleChange}
         />
       </div>
-      {/* <fieldset>
+      <fieldset>
         <legend>Endereço</legend>
         <div>
           <label htmlFor="rua">Rua:</label>
@@ -150,7 +150,7 @@ function TutorForm({ addTutor }) {
             onChange={handleChange}
           />
         </div>
-      </fieldset> */}
+      </fieldset>
       <button type="submit">Adicionar Tutor</button>
     </form>
   );
